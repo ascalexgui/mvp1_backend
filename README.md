@@ -1,6 +1,6 @@
 # Minha API
 
-Este pequeno projeto faz parte do primeiro MVP da Sprint I do curso **Desenvolvimento Full Stack Básico** 
+Este pequeno projeto faz parte do primeiro MVP da Sprint I do curso "Desenvolvimento Full Stack Básico" 
 
 O objetivo aqui é apresentar o conhecimento adquirido ao longo do módulo 01 que englobou os seguinte módulos:
 
