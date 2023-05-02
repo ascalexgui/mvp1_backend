@@ -1,4 +1,7 @@
-# Minha API
+# Minha API FECHAACONTA
+
+## Aluno
+Andréia Souza Carvalho
 
 Este pequeno projeto faz parte do primeiro MVP da Sprint I do curso "Desenvolvimento Full Stack Básico" 
 
