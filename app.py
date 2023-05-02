@@ -1,6 +1,8 @@
 from flask_openapi3 import OpenAPI, Info, Tag
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import func
+from urllib.parse import unquote
+
 from flask_cors import CORS
 from flask import redirect
 
@@ -39,7 +41,7 @@ def inclui_despesa(form: DespesaSchema):
     """Adiciona uma nova despesa informando o nome, quantidade e valor"""
 
     despesa = Despesa(
-        nome=form.nome,
+        nome=form.nome.lower(),
         quantidade=form.quantidade,
         valor=form.valor)
 
@@ -74,9 +76,9 @@ def get_lista_despesas():
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    despesas = session.query(Despesa).all()
+    # despesas = session.query(Despesa).all()
 
-    # despesas = session.query(Despesa).order_by(Despesa.nome.asc()).all
+    despesas = session.query(Despesa).order_by(Despesa.nome.asc()).all()
 
     if not despesas:
         # se não há despesas cadastradas
@@ -129,14 +131,13 @@ DELETE
 def del_deleta_por_nome(query: DespesaBuscaNomeSchema):
     """Deleta uma despesa a partir do seu nome"""
 
-    nome = query.nome
+    nome = unquote(query.nome).lower()
 
     # criando conexão com a base
     session = Session()
     # fazendo a remoção
     despesa = session.query(Despesa).filter(Despesa.nome == nome).first()
-   
-    
+
     if despesa:
         session.query(Despesa).filter(Despesa.nome == nome).delete()
         session.commit()
