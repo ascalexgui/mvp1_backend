@@ -10,7 +10,7 @@ O objetivo aqui é apresentar o conhecimento adquirido ao longo do módulo 01 qu
 2) Banco de dados
 3) Desenvolvimento Full Stack Básico
 
-O banco é carregado na __init__.py
+O banco é carregado na "__init__.py"
 
 Usei o Visual Studio CODE.
 
