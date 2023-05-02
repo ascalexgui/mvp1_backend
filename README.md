@@ -10,30 +10,41 @@ O objetivo aqui é apresentar o conhecimento adquirido ao longo do módulo 01 qu
 
 O banco é carregado na __init__.py
 
+Usei o Visual Studio CODE.
+
 Uso de um recurso ORM facilita o mapeamento entre aquilo que está no banco e as classes de negócio.
 
-A BASE 
-
----
 ## Como executar 
 
+É fortemente indicado o uso de ambientes virtuais do tipo [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
+O ambiente virtual é criado na pasta do projeto no subdiretório ENV ( esse diretório não deve ser enviado para o GIT (repositório))
+O objetivo do ambiente virtual é criar uma área onde instalamos as bibliotecas necessárias para o projeto, bem como a versão do Python que iremos utilizar. 
 
-Será necessário ter todas as libs python listadas no `requirements.txt` instaladas.
+Uma vez criado o ambiente virtual não precisamos instalar tudo novamente quando desativamos esse ambiente. A pasta do ambiente virtual é o ENV.
+
 Após clonar o repositório, é necessário ir ao diretório raiz, pelo terminal, para poder executar os comandos descritos abaixo.
 
-> É fortemente indicado o uso de ambientes virtuais do tipo [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
+	• Criando o ambiente virtual do projeto:
+	cd your-project
+	py -m venv env
+	 
+	Será criada uma pasta ENV no seu projeto com o ambiente virtual
+	 
+	• Ativando o ambiente virtual
+	 
+	.\env\Scripts\activate( ambiente Windows)
+	 
+	Source env\bin\activate (ambiente Linux)
+  
+  • Carregando as libs python 
+  
+  (env)$ pip install -r requirements.txt
 
-```
-(env)$ pip install -r requirements.txt
-```
 
-Este comando instala as dependências/bibliotecas, descritas no arquivo `requirements.txt`.
+  • Executando a API 
 
-Para executar a API  basta executar:
+  (env)$ flask run --host 0.0.0.0 --port 5000
 
-```
-(env)$ flask run --host 0.0.0.0 --port 5000
-```
 
 Em modo de desenvolvimento é recomendado executar utilizando o parâmetro reload, que reiniciará o servidor
 automaticamente após uma mudança no código fonte. 
