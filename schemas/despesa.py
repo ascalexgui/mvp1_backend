@@ -9,14 +9,6 @@ class DespesaSchema(BaseModel):
     valor: float = 5000.00
     quantidade: Optional[int] = 1
 
-
-class DespesaBuscaSchema(BaseModel):
-    """ Define como deve ser a estrutura que representa a busca. Que será
-        feita apenas com base no ID da despesa.
-    """
-    id: int = 1
-    nome: Optional[str] = "Casa"
-
 class DespesaBuscaNomeSchema(BaseModel):
     """ Define como deve ser a estrutura que representa a busca. Que será
         feita apenas com base no nome da despesa.
@@ -39,7 +31,7 @@ def apresenta_despesas(despesas: List[Despesa]):
     total_gasto = .0
     for despesa in despesas:
         result.append({
-            "id"        : despesa.id,
+            "idDespesa" : despesa.idDespesa,
             "nome"      : despesa.nome,
             "quantidade": despesa.quantidade,
             "valor"     : despesa.valor
@@ -53,10 +45,10 @@ def apresenta_despesas(despesas: List[Despesa]):
 class DespesaViewSchema(BaseModel):
     """ Define como uma despesa será retornada: despesa
     """
-    id: int = 1
-    nome: str = "Aluguel casa"
-    quantidade: Optional[int] = 1
-    valor: float = 5000.00
+    idDespesa   : int = 1
+    nome        : str = "Aluguel casa"
+    quantidade  : Optional[int] = 1
+    valor       : float = 5000.00
 
 class DespesaDelSchema(BaseModel):
     """ Define como deve ser a estrutura do dado retornado após uma requisição
@@ -70,8 +62,8 @@ def apresenta_despesa(despesa: Despesa):
         DespesaViewSchema.
     """
     return {
-        "id": despesa.id,
-        "nome": despesa.nome,
+        "idDespesa" : despesa.idDespesa,
+        "nome"      : despesa.nome,
         "quantidade": despesa.quantidade,
-        "valor": despesa.valor    
+        "valor"     : despesa.valor    
     }

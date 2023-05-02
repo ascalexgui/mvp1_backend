@@ -9,7 +9,7 @@ from  model import Base
 class Despesa(Base):
     __tablename__ = 'despesa'
 
-    id              = Column(Integer, primary_key=True)
+    idDespesa       = Column(Integer, primary_key=True)
     nome            = Column(String(140))
     valor           = Column(Float)
     quantidade      = Column(Integer)

@@ -8,11 +8,13 @@ O objetivo aqui é apresentar o conhecimento adquirido ao longo do módulo 01 qu
 2) Banco de dados
 3) Desenvolvimento Full Stack Básico
 
+O ESCOPO É APENAS OS FONTES DO BACKEND.
+
 O banco é carregado na __init__.py
 
-Uso de um recurso ORM facilita o mapeamento entre aquilo que está no banco e as classes de negócio.
+Usei o recurso ORM que facilita o mapeamento entre aquilo que está no banco e as classes de negócio.
 
-A BASE 
+Temos apenas um banco chamado DESPESAS.
 
 ---
 ## Como executar 
