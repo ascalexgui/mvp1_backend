@@ -1,4 +1,4 @@
-# Minha API FECHAACONTA
+# Minha API FECHA_A_CONTA
 
 ## Aluno : Andréia Souza Carvalho
 
