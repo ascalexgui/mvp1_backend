@@ -114,5 +114,7 @@ credentials.txt
 
 # log files
 *.log
+LOG/
+log/
 
 .DS_Store
