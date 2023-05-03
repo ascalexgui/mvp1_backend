@@ -18,7 +18,7 @@ Usei o Visual Studio CODE.
 
 Usei o recurso ORM que facilita o mapeamento entre aquilo que está no banco e as classes de negócio.
 
-A BASE 
+A BASE é SQLITE
 
 ---
 ## Como executar 
